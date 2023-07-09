@@ -1,0 +1,4 @@
+roles:
+  - name: istvano.microk8s
+    src: https://github.com/franaraujo77/ansible_role_microk8s
+    version: master
