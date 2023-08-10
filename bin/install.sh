@@ -12,6 +12,6 @@ ansible-galaxy install -f -r requirements.yml
 
 ansible-playbook -i ./inventory/cluster/hosts.ini ./install.yml
 
-if [ $? -eq 0 ]; then
-    updateKubeConfig
-fi
+#if [ $? -eq 0 ]; then
+#    updateKubeConfig
+#fi

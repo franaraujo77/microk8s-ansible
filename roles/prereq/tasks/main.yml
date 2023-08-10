@@ -9,6 +9,13 @@
     state: disabled
   when: ansible_os_family == "RedHat"
 
+- name: Set huge pages
+  ansible.posix.sysctl:
+    name: vm.nr_hugepages
+    value: '1024'
+    reload: true
+    state: present
+
 - name: Enable IPv4 forwarding
   sysctl:
     name: net.ipv4.ip_forward
@@ -88,3 +95,14 @@
   apt:
     name: software-properties-common
     state: present
+
+- name: Install open-iscsi From Apt-Get
+  become: yes
+  apt:
+    name: open-iscsi
+    state: present
+
+- name: Enable service iscsid
+  ansible.builtin.service:
+    name: iscsid
+    enabled: yes

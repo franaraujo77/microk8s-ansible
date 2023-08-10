@@ -22,7 +22,7 @@
           helm: false                             # Helm 2 - the package manager for Kubernetes
           helm3: true                             # Helm 3 - Kubernetes package manager
           istio: false                            # Core Istio service mesh services
-          jaeger: true                            # Kubernetes Jaeger operator with its simple config
+          jaeger: false                           # Kubernetes Jaeger operator with its simple config
           knative: false                          # The Knative framework on Kubernetes.
           kubeflow: false                         # Kubeflow for easy ML deployments
           linkerd: false                          # Linkerd is a service mesh for Kubernetes and other frameworks
